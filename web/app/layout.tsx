@@ -11,15 +11,15 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'kzh',
+    template: '%s | kzh',
   },
-  description: 'This is my portfolio.',
+  description: '',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'kzh',
+    description: '',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: '',
     locale: 'en_US',
     type: 'website',
   },
@@ -56,7 +56,6 @@ export default function RootLayout({
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
-          <Footer />
           <Analytics />
           <SpeedInsights />
         </main>
