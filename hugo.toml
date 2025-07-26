@@ -1,0 +1,5 @@
+baseURL = 'https://kzh.dev/'
+languageCode = 'en-us'
+title = 'kzh'
+author = 'Kevin Zheng'
+theme = 'hugo-bearblog'
