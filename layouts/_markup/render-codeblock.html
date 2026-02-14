@@ -1,0 +1,8 @@
+{{- $highlight := transform.HighlightCodeBlock . -}}
+{{- $html := $highlight.Wrapped -}}
+{{- $html = replaceRE `\s*tabindex="0"` "" $html -}}
+{{- $html = replaceRE `display:flex;` "display:block;" $html -}}
+{{- $html = replaceRE `\n?</span></span><span style="display:[^;]+;"><span>` "\n" $html -}}
+{{- $html = replaceRE `(<code[^>]*>)<span style="display:[^;]+;"><span>` "$1" $html -}}
+{{- $html = replaceRE `\n?</span></span>(</code>)` "$1" $html -}}
+{{- $html | safeHTML -}}

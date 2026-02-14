@@ -1,0 +1,259 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap">
+<style>
+  :root {
+    --rp-base: #faf4ed;
+    --rp-surface: #fffaf3;
+    --rp-overlay: #f2e9e1;
+    --rp-muted: #9893a5;
+    --rp-subtle: #797593;
+    --rp-text: #4c4872;
+    --rp-home-intro: #241f45;
+    --rp-love: #b4637a;
+    --rp-gold: #ea9d34;
+    --rp-rose: #d7827e;
+    --rp-pine: #286983;
+    --rp-foam: #56949f;
+    --rp-iris: #6E5F9A;
+
+    --background-color: #faf4ed;
+    --heading-color: #575279;
+    --text-color: #4c4872;
+    --link-color: #286983;
+    --visited-color: #907aa9;
+    --blockquote-color: #797593;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --rp-base: #faf4ed;
+      --rp-surface: #fffaf3;
+      --rp-overlay: #f2e9e1;
+      --rp-muted: #9893a5;
+      --rp-subtle: #797593;
+      --rp-text: #4c4872;
+      --rp-home-intro: #241f45;
+      --rp-love: #b4637a;
+      --rp-gold: #ea9d34;
+      --rp-rose: #d7827e;
+      --rp-pine: #286983;
+      --rp-foam: #56949f;
+      --rp-iris: #6E5F9A;
+
+      --background-color: #faf4ed;
+      --heading-color: #575279;
+      --text-color: #4c4872;
+      --link-color: #286983;
+      --visited-color: #907aa9;
+      --blockquote-color: #797593;
+    }
+  }
+
+  h1 {
+    color: var(--rp-love);
+  }
+
+  h2 {
+    color: var(--rp-pine);
+  }
+
+  h3 {
+    color: var(--rp-iris);
+    font-weight: 600;
+  }
+
+  h4,
+  h5,
+  h6 {
+    color: var(--rp-subtle);
+  }
+
+  h5,
+  h6 {
+    color: var(--rp-muted);
+  }
+
+  .post-title {
+    color: #3f3b63;
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+    line-height: 1.15;
+  }
+
+  .post-date {
+    color: var(--rp-subtle);
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .post-date time {
+    font-family: inherit;
+    font-size: 1em;
+  }
+
+  nav a {
+    color: var(--rp-pine);
+  }
+
+  nav a:hover {
+    color: var(--rp-rose);
+  }
+
+  strong,
+  b {
+    color: var(--rp-love);
+  }
+
+  li::marker {
+    color: var(--rp-gold);
+  }
+
+  blockquote {
+    border-left-color: var(--rp-foam);
+    background: var(--rp-surface);
+  }
+
+  code,
+  pre code {
+    background: var(--rp-overlay);
+    color: var(--rp-text);
+  }
+
+  hr {
+    border-top-color: var(--rp-muted);
+  }
+
+  main p {
+    color: var(--rp-text);
+  }
+
+  .home-content > hr:first-of-type ~ p {
+    color: var(--rp-home-intro);
+  }
+
+  .home-content > hr:nth-of-type(2) ~ p {
+    color: var(--rp-text);
+  }
+
+  mjx-container {
+    color: var(--rp-text);
+  }
+
+  main a[href="https://github.com/kzh"]::before,
+  main a[href="https://www.linkedin.com/in/kzh"]::before {
+    content: "•";
+    color: var(--rp-gold);
+    font-weight: 700;
+    font-size: 0.72em;
+    line-height: 1;
+    margin-right: 0.56em;
+  }
+
+  main a[href="https://github.com/kzh"],
+  main a[href="https://www.linkedin.com/in/kzh"] {
+    color: var(--rp-love);
+    font-weight: 550;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  main a[href="https://github.com/kzh"]:hover,
+  main a[href="https://www.linkedin.com/in/kzh"]:hover {
+    text-decoration: none;
+  }
+
+  main a[href="https://github.com/kzh"]:visited,
+  main a[href="https://www.linkedin.com/in/kzh"]:visited {
+    color: var(--rp-love);
+  }
+
+  main a[href="https://www.linkedin.com/in/kzh"] {
+    margin-left: 0.56em;
+  }
+
+  .site-header-inline {
+    display: flex;
+    align-items: baseline;
+    column-gap: 1.4rem;
+    row-gap: 0.6rem;
+    flex-wrap: nowrap;
+  }
+
+  .site-header-inline .title h2 {
+    color: var(--rp-love);
+    font-family: "Sora", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .site-header-inline nav {
+    margin-left: auto;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .site-header-inline nav a {
+    margin-right: 0;
+  }
+
+</style>
+{{ if .Param "math" }}
+<style>
+  main {
+    visibility: hidden;
+  }
+
+  html.math-ready main {
+    visibility: visible;
+  }
+</style>
+<noscript>
+  <style>
+    main {
+      visibility: visible !important;
+    }
+  </style>
+</noscript>
+<script>
+  (function () {
+    function showMathPage() {
+      document.documentElement.classList.add("math-ready");
+    }
+
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady()
+            .then(() => {
+              showMathPage();
+            })
+            .catch(() => {
+              showMathPage();
+            });
+        }
+      }
+    };
+
+    window.addEventListener(
+      "load",
+      function () {
+        setTimeout(showMathPage, 15000);
+      },
+      { once: true }
+    );
+  })();
+</script>
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{{ end }}

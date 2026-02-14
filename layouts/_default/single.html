@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $showMeta := and (not .Params.menu) (or (eq .Type "blog") (eq .Type "writing")) }}
+{{ if $showMeta }}
+<h1 class="post-title">{{ .Title }}</h1>
+<p class="post-date">
+  <i>
+    <time datetime='{{ .Date.Format "2006-01-02" }}'>
+      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+    </time>
+  </i>
+</p>
+{{ end }}
+<content>
+  {{ .Content }}
+</content>
+
+{{ if and (eq .Type "blog") (.Param "enablePostNavigator") }}
+{{- partial "post_navigator.html" . -}}
+{{ end }}
+
+{{ $tags := .GetTerms "tags" }}
+{{ if gt (len $tags) 0 }}
+<p>
+  {{ range $tags }}
+  <a href="{{ .RelPermalink }}">#{{ partial "tag_label.html" .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
+{{ end }}

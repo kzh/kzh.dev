@@ -3,3 +3,21 @@ languageCode = 'en-us'
 title = 'kzh'
 author = 'Kevin Zheng'
 theme = 'hugo-bearblog'
+
+[params]
+hideMadeWithLine = true
+
+[markup]
+  [markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['$$', '$$'], ['\\[', '\\]']]
+        inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    style = 'rose-pine-dawn'
+    lineNos = false
+    lineNumbersInTable = false

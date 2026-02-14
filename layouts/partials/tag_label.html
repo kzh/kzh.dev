@@ -1,0 +1,8 @@
+{{- $raw := . | default "" -}}
+{{- $key := $raw | lower | urlize -}}
+{{- $labels := site.Data.tag_labels | default dict -}}
+{{- with index $labels $key -}}
+{{- . -}}
+{{- else -}}
+{{- $raw | replaceRE "[-_]+" " " | title -}}
+{{- end -}}
